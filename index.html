@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jumping Jabka</title>
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React (глобальные React и ReactDOM) -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+
+    <!-- three.js (глобальный THREE) -->
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+
+    <!-- Babel для JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.24.10/babel.min.js"></script>
+
+    <!-- твой компонент -->
+    <script type="text/babel" data-presets="react" src="./app.jsx"></script>
+  </body>
+</html>
