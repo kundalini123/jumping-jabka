@@ -1,7 +1,5 @@
-"use client";
-
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import * as THREE from "three";
+const { useEffect, useMemo, useRef, useState } = React;
+const THREE = window.THREE;
 
 /**
  * Симуляция 3D-жабы: прыжки в разные стороны с ограничением поворота до 90° и дрифт после приземления.
@@ -144,7 +142,7 @@ function disposeMaterial(mat) {
   mat.dispose?.();
 }
 
-export default function App() {
+function App() {
   const mountRef = useRef(null);
   const rafRef = useRef(0);
   const [hud, setHud] = useState({ speed: 0, turn: 0, drift: 0 });
@@ -943,3 +941,5 @@ export default function App() {
     </div>
   );
 }
+ReactDOM.createRoot(document.getElementById("root"))
+  .render(React.createElement(App));
